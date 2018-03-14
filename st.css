@@ -63,15 +63,15 @@ li {
 /*  Party view */
 #conservative, #labour, #libdem { padding: 10px; }
 #conservative {
-    background: rgba(42, 54, 59, 0.4);
+    background: rgba(8, 127, 189, 0.2);
     top: 110px;
 }
 #labour {
-    background: rgba(255, 132, 124, 0.5);
+    background: rgba(240, 34, 51, 0.2);
     top: 330px;
 }
 #libdem {
-    background: rgba(254, 206, 171, 0.5);
+    background: rgba(253, 187, 48, 0.2);
     top: 550px;
 }
 
@@ -118,16 +118,6 @@ li {
 
 /* End of view */
 
-
-.zoom {
-    transition: all .2s ease-in-out;
-}
-.zoom:hover {
-    transform: scale(1.8);
-    background: #e6e6e6; 
-}
-
-
 circle {
     stroke: rgba(238, 238, 238, 1);
     stroke-width: 0.5;
@@ -162,13 +152,13 @@ circle.active {
     margin: 0.2em;
 }
 .lab {
-    fill: #FF847C;
+    fill: #F02233;
 }
 .lib {
-    fill: #FECEAB;
+    fill: #FDBB30;
 }
 .con {
-    fill: #2A363B;
+    fill: #087FBD;
 }
 .snp {
     fill: #C9C945;
