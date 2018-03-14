@@ -21,28 +21,25 @@ li {
 
 /* 	Information boxes for different chart layouts */
 /* Positioning */
-#initial-content, #a, #b, #c, #d, #e, #f, #view-party-type, #view-donor-type, #view-source-type, #view-amount-type1, #view-amount-type2, #partyInfo, #conservative, #labour, #libdem, #individual, #company, #union, #society, #other, #public-or-private-money, #public-or-private-money-split, #private-money, #public-money, #m1, #k500, #k100, #k50, #k25, #k25OrLess{ 
+#initial-content, #a, #b, #c, #d, #e, #f, #view-party-type, #view-donor-type, #view-source-type, #partyInfo, #conservative, #labour, #libdem, #individual, #company, #union, #society, #other, #public-or-private-money, #public-or-private-money-split, #private-money, #public-money { 
     position: absolute; 
 }
 
 /* Initial appearance on load */
-#view-party-type, #view-donor-type, #view-source-type, #view-amount-type1, #view-amount-type2 {
+#view-party-type, #view-donor-type, #view-source-type {
     display: none;
 }
 
 /* View containers */
 #initial-content, #view-source-type {
-    left: 60%;
+    left: 650px;
     width: 400px;
 }
 #view-party-type {
-    left: 55%;
+    left: 650px;
     width: 272px;
 }
 
-#view-amount-type {
-    left: 200px;
-}
 /*  Public or private funds view */
 
 #public-or-private-money {
@@ -63,27 +60,25 @@ li {
     left: 610px;
 }
 
-
 /*  Party view */
-#conservative, #labour, #libdem, #m1, #k500, #k100, #k50, #k25, #k25OrLess { padding: 10px; }
+#conservative, #labour, #libdem { padding: 10px; }
 #conservative {
-    background: rgba(134, 0, 60, 0.3);
+    background: rgba(42, 54, 59, 0.4);
     top: 110px;
 }
 #labour {
-    background: rgba(40, 45, 79, 0.3);
+    background: rgba(255, 132, 124, 0.5);
     top: 330px;
 }
 #libdem {
-    background: rgba(228, 31, 123, 0.3);
+    background: rgba(254, 206, 171, 0.5);
     top: 550px;
 }
 
 /*	Donor type layout */
 #view-donor-type {
-    
     height: 100%;
-    left: 760px;
+    left: 500px;
     width: 370px;
     
 }
@@ -107,54 +102,9 @@ li {
     right: 0
 }
 
-#view-amount-type1{
-    height: 100%;
-    left: 9%;
-    width: 14%;
-}
-
-#view-amount-type2{
-    height: 100%;
-    left: 70%;
-    width: 15%;
-}
-#m1 {
-    top: 20%;
-}
-
-#k500 {
-    top: 20%;
-    text-align: right;
-    right: 0;
-}
-
-#k100 {
-    top: 45%;
-}
-
-#k50 {
-    top: 45%;
-    text-align: right;
-    right: 0;
-}
-
-#k25 {
-    top: 70%;
-}
-
-#k25OrLess {
-    top: 70%;
-    text-align: right;
-    right: 0;
-}
-
 /* Value scale */
 
 #value-scale {
-    position:absolute;
-    width: 1000px;
-    top: 0;
-    left: 15%;
     opacity: 0.5;
     font-size: 0.75em;
 }
@@ -168,13 +118,15 @@ li {
 
 /* End of view */
 
+
 .zoom {
     transition: all .2s ease-in-out;
 }
 .zoom:hover {
-    transform: scale(2);
-    background: #e5efff; 
+    transform: scale(1.8);
+    background: #e6e6e6; 
 }
+
 
 circle {
     stroke: rgba(238, 238, 238, 1);
@@ -210,13 +162,13 @@ circle.active {
     margin: 0.2em;
 }
 .lab {
-    fill: #F02233;
+    fill: #FF847C;
 }
 .lib {
-    fill: #FDBB30;
+    fill: #FECEAB;
 }
 .con {
-    fill: #087FBD;
+    fill: #2A363B;
 }
 .snp {
     fill: #C9C945;
