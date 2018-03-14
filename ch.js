@@ -6,9 +6,6 @@ var force, node, data, maxVal;
 var brake = 0.2;
 var radius = d3.scale.sqrt().range([10, 20]);
 
-var reader = new SpeechSynthesisUtterance();
-reader.rate =1.0;
-
 var partyCentres = { 
     con: { x: w / 3, y: h / 3.3}, 
     lab: {x: w / 3, y: h / 2.3}, 
@@ -24,7 +21,7 @@ var entityCentres = {
 		individual: {x: w / 3.65, y: h / 3.3},
 	};
 
-var fill = d3.scale.ordinal().range(["#FF847C", "#2A363B", "#FECEAB"]);
+var fill = d3.scale.ordinal().range(["#F02233", "#087FBD", "#FDBB30"]);
 
 var svgCentre = { 
     x: w / 3.6, y: h / 2
@@ -95,8 +92,7 @@ function start() {
 		.attr("r", 0)
 		.style("fill", function(d) { return fill(d.party); })
 		.on("mouseover", mouseover)
-		.on("mouseout", mouseout)
-        .on("click",googleSearch);
+		.on("mouseout", mouseout);
 		// Alternative title based 'tooltips'
 		// node.append("title")
 		//	.text(function(d) { return d.donor; });
@@ -320,10 +316,9 @@ function mouseover(d, i) {
 	var entity = d.entityLabel;
 	var offset = $("svg").offset();
 	
-    reader.text =donor.concat(amount);
-    window.speechSynthesis.speak(reader);
 
-	// image url that want to c
+
+	// image url that want to check
 	var imageFile = "https://raw.githubusercontent.com/ioniodi/D3js-uk-political-donations/master/photos/" + donor + ".ico";
 
 	
@@ -353,14 +348,6 @@ function mouseover(d, i) {
 	
 	}
 
-function googleSearch(d,i){
-    var mosie = d3.select(this);
-    var donor = d.donor;
-    var url ='http://www.google.com/search?q=' + donor;
-    window.open(url,'_blank');
-}
-
-
 function mouseout() {
 	// no more tooltips
 		var mosie = d3.select(this);
@@ -369,13 +356,10 @@ function mouseout() {
 
 		d3.select(".tooltip")
 			.style("display", "none");
-    window.speechSynthesis.cancel();
 		}
 
 $(document).ready(function() {
 		d3.selectAll(".switch").on("click", function(d) {
-        var button = document.getElementById('button');
-        button.play();    
       var id = d3.select(this).attr("id");
       return transition(id);
     });
